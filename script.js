@@ -112,3 +112,21 @@ for (let i = 1; i < rows.length; i++) {
 }
 
 console.log(objects);
+
+// Part Four 
+
+objects.pop()
+objects.splice(1,0, { id: "48", name: "Barry", occupation: "Runner", age: "25"});
+objecs.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" });
+
+console.log(objects);
+
+let totalAge= 0;
+
+for (let i = 0; i < objects.length; i++) {
+    totalAge += Number(objects[i].age);
+}
+
+let aveAge = totalAge / objects.length;
+
+console.log("Average Age:", aveAge);
