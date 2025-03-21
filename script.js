@@ -80,3 +80,35 @@ for (let i = 0; i < str.length; i++) { // to loop through the entire string
 
 console.log(`Number of columns:`, numColumns);
 console.log(rows);
+
+// Transforming Data
+
+let headers = [];
+let objests = [];
+
+for (let i = 0; i < rows[0].length; i++) {
+    let lowerCaseHeader = ``;
+    let header = rows[0][i];
+    for (let x = 0; x < header.length; x++) {
+        let char = header[x];
+        if (char >= `A` && char <= `Z`) {
+            lowerCaseHeader += String.fromCharCode(char.charCodeAt(0) + (32));
+        }
+    else {
+        lowerCaseHeader += char;
+    }
+    }
+    
+    headers.push(lowerCaseHeader);
+}
+
+for (let i = 1; i < rows.length; i++) {
+    let row = rows [i];
+    let obj =  {};
+    for (let x = 0; x < numColumns; x++) {
+        obj[headers[x]] = row[x];
+    }
+    Objects.push(obj);
+}
+
+console.log(objects);
