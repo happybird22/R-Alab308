@@ -130,3 +130,18 @@ for (let i = 0; i < objects.length; i++) {
 let aveAge = totalAge / objects.length;
 
 console.log("Average Age:", aveAge);
+
+// Part 5
+
+let csvString = `ID,Name,Occupation,Age\n`;
+
+for (let i = 0; i < objects.length; i++) {
+    let row = objects[i].id + `,` + objects[i].name + `,` + objects[i].occupation + `,` + objects[i].age;
+    csvString =+ row;
+
+    if (i !== objects.length - 1) {
+        csvString =+ `\n`;
+    }
+}
+
+console.log(csvString);
