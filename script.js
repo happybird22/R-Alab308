@@ -84,7 +84,7 @@ console.log(rows);
 // Transforming Data
 
 let headers = [];
-let objests = [];
+let objects = [];
 
 for (let i = 0; i < rows[0].length; i++) {
     let lowerCaseHeader = ``;
@@ -108,7 +108,7 @@ for (let i = 1; i < rows.length; i++) {
     for (let x = 0; x < numColumns; x++) {
         obj[headers[x]] = row[x];
     }
-    Objects.push(obj);
+    objects.push(obj);
 }
 
 console.log(objects);
@@ -117,7 +117,7 @@ console.log(objects);
 
 objects.pop()
 objects.splice(1,0, { id: "48", name: "Barry", occupation: "Runner", age: "25"});
-objecs.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" });
+objects.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" });
 
 console.log(objects);
 
